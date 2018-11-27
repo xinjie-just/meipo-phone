@@ -1,0 +1,473 @@
+@charset "UTF-8";
+@import "variables";
+//设置所有浏览器中外边距不为零的元素的外边距为零
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+hr,
+blockquote,
+pre,
+textarea,
+fieldset,
+figure,
+ul,
+ol,
+dl,
+dd,
+menu {
+  margin: 0;
+}
+
+//设置所有浏览器中内填充不为零的元素的内填充为零
+input,
+textarea,
+button,
+select,
+option,
+fieldset,
+legend,
+ul,
+ol,
+menu,
+th,
+td {
+  padding: 0;
+}
+
+//设置所有浏览器中边框不为零的元素的边框为零
+hr,
+progress,
+input,
+textarea,
+button,
+select,
+fieldset {
+  border: 0;
+}
+
+//在 IE浏览器 和 iOS 设备的浏览器中阻止调整字体的尺寸
+html {
+  font-size: 100px;
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+//设置所有元素的盒模型，将内填充和边距算在宽或高之内
+* {
+  &,
+  &:before,
+  &:after {
+    box-sizing: border-box;
+  }
+}
+
+// 页面最大宽
+%page-width {
+  width: 100%;
+  max-width: 767px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+body {
+  @extend %page-width;
+  font-size: .16rem;
+  color: $text-color;
+  background-color: #fff;
+  font-family: "Microsoft Yahei", "苹方", Arial, sans-serif;
+}
+
+//在 IE 9 及低版本浏览器中为下列元素设置为 inline-block 的显示方式
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+}
+
+//在 iOS 4-7 中为无 controls属性的 audio 元素添加正确的显示方式
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+//在 Chrome, Firefox 和 Opera 中设置垂直方向基线对齐方式
+progress {
+  vertical-align: baseline;
+}
+
+//在 IE 中添加正确的显示方式
+template,
+[hidden] {
+  display: none;
+}
+
+/* ===链接=== */
+
+//在 IE 10 中移除链接被激活后的灰色背景
+//在 iOS 8+ 和 Safari 8+ 中删除链接下划线位置处的空白
+a {
+  color: $text-color;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  text-decoration: none;
+  &:focus,
+  &:active,
+  &:hover {
+    //当链接处于焦点、被激活和鼠标悬停其上时清除轮廓
+    outline-width: 0;
+    text-decoration: none;
+  }
+}
+
+/* ===文本=== */
+
+//在 Firefox 39 及之前的版本中移除 abbr 元素的下边框
+//在 Chrome, Edge, IE, Opera 和 Safari 中为 abbr 元素添加下划线
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+}
+
+//在 Safari 6 中防止下列元素通过后面的规则重复的应用程序的字体为粗体
+b,
+strong {
+  font-weight: inherit;
+}
+
+//在 Chrome, Edge 和 Safari 浏览器中为下列元素添加正确的字体粗细
+b,
+strong {
+  font-weight: bolder;
+}
+
+//在 Android 4.3 及之前系统的设备中的浏览器为下列元素添加字体风格为斜体
+dfn {
+  font-style: italic;
+}
+
+//在 Chrome, Firefox 和 Safari 浏览器中纠正在含有 section 和 article 语境下的 h1 元素的字体尺寸和外边距
+article h1,
+section h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+//在 IE 9 及之前的浏览器版本中为 mark 元素添加背景颜色和字体颜色
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+//为 small 元素设置字体尺寸为离其最近的含有 font-size 属性的祖先元素的值的 80%
+small {
+  font-size: 80%;
+}
+
+//防止 sub 和 sup 元素影响行高
+%sub-sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  @extend %sub-sup;
+  bottom: -0.25em;
+}
+
+sup {
+  @extend %sub-sup;
+  top: -0.5em;
+}
+
+::selection {
+  background-color: $main-color;
+  color: #fff;
+}
+
+/* ===嵌入式内容=== */
+
+//在 IE 10 及更早的浏览器中当图片处于链接内部时移除图片的边框
+img {
+  border-style: none;
+}
+
+//在 IE 浏览器中当 svg 元素不是根元素时隐藏溢出
+svg:not(:root) {
+  overflow: hidden;
+}
+
+
+/* ===分组内容=== */
+
+//纠正字体尺寸的继承和缩放(momospace字体是linux系统下的默认字体)
+//在所有浏览器中纠正奇数的以 em 作为单位的字体尺寸
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: $font-size;
+}
+
+//在 Firefox 浏览器下为 hr 元素添加正确的和模型尺寸计算方式
+//在 Edge 和 IE 中 hr 元素溢出时不隐藏
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+
+/* ===表单=== */
+
+//改变字体属性为继承
+//在 Firefox 和 Safari 中为下列元素移除外边距
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  margin: 0;
+}
+
+//通过之前的规则修复 optgroup 元素的字体粗细
+optgroup {
+  font-weight: bold;
+}
+
+//溢出时不隐藏
+button,
+input {
+  overflow: visible;
+}
+
+//移除文本大小写的继承
+button,
+select {
+  text-transform: none;
+}
+
+//在 Android 4 系统版本中阻止破坏本地的音频视频控件的错误
+//在 iOS 和 Safari 中纠正不能点击的类型
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+  background-color: transparent;
+  &:focus {
+    outline: none;
+  }
+}
+
+//在 Firefox 中移除内部边框和内填充(firefox浏览器中button元素点击时会出现虚线边框)
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+//由先前的规则恢复焦点样式设置
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+//设置 fieldset 元素的 border, margin 和 padding 属性的值
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+//在 Edge 和 IE 中纠正文本包裹
+//纠正在 IE 中从 fieldset 元素继承而来的颜色值
+//在所有浏览器中当开发者清零了 fieldset 元素的属性时，移除 padding 属性的值，以便他们能找出其它错误
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+//在 IE 浏览器中移除默认的垂直导航条
+textarea {
+  overflow: auto;
+}
+
+//在 IE 10 及之前的浏览器中改变盒模型的默认规则，即将内填充和边框也算在宽高之内
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+//纠正在 Chrome 浏览器中递增和递减按钮的光标样式
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+//纠正 Chrome 和 Safari 浏览器奇怪的外观（看上去像文本框）
+//纠正在 Safari 浏览器中的轮廓样式（设置轮廓的偏移）
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+//在 OS X 的 Chrome 和 Safari 浏览器中删除内填充和移除按钮
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+//纠正在 Chrome, Edge 和 Safari 中文本占位符属性的样式
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54;
+}
+
+//纠正在 iOS 和 Safair 中可点击类型不能点击的样式
+//更改字体属性，在 Safari 中以继承的方式。
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+
+/* ===表格=== */
+
+//设置表格的边框合并为单一的边框，
+//border-collapse 属性会忽略 border-spacing(相邻单元格边框间的距离) 属性和 empty-cells(是否在空单元格周围绘制边框)
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption,
+th {
+  text-align: left;
+}
+
+
+/* ===列表=== */
+
+//设置列表的标记类型为无
+ol,
+ul {
+  list-style-type: none;
+}
+
+/* ===关于浮动=== */
+
+%fl {
+  float: left;
+}
+
+%fr {
+  float: right;
+}
+
+%clearfix {
+  &:before {
+    content: "";
+    display: table;
+  }
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+/*快捷样式*/
+figure {
+  overflow: hidden;
+  & a {
+    display: block;
+  }
+  & img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+label {
+  margin-bottom: 0;
+  cursor: pointer;
+  &:hover {
+    opacity: .8;
+  }
+}
+
+%ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin line-clamp($line-number: 2) {
+  /*多行文本省略*/
+  display: -webkit-box !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $line-number;
+}
+@mixin center-content($width: 92%) {
+  display: block;
+  width: $width;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+%responsive-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+%middle-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/*validate错误提示*/
+
+label.error {
+  color: #f00;
+  display: block;
+  margin-bottom: 5px;
+}
+
+#errorTips {
+  display: block;
+  color: #f00;
+  visibility: hidden;
+}
