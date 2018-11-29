@@ -89,3 +89,12 @@ $("#toTop").on("tap", function () {
 $("#back").on("tap", function () {
     history.go(-1);
 });
+
+/*菜单切换*/
+$("#subNav").find("li").on("tap", function () {
+   var $index = $(this).index();
+   var $section = $(this).parents("main").find("section");
+   $(this).find("a").addClass("active");
+   $(this).siblings("li").find("a").removeClass("active");
+   $section.eq($index).addClass("active").siblings("section").removeClass("active");
+});
