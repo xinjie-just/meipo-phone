@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=Edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-        <title>联系我们 | 美珀门窗</title>
+        <title>地图 | 美珀门窗</title>
         <meta name="keywords" content="美珀门窗,纯净,透明,现代简洁,功能门窗">
         <meta name="description" content="美珀门窗,融合现代美学与门窗功能">
         <link rel="stylesheet" href="styles/meipo-phone.css">
@@ -22,22 +22,12 @@
         </div>
         <div id="container" class="container">
             <header id="header" class="header" role="banner">
+                <button type="button" id="back" class="iconfont icon-back back-btn"></button>
                 <h1><a href="#" title="首页"></a></h1>
                 <button type="button" id="menu" class="iconfont icon-menu menu-btn"></button>
             </header>
             <main id="main" class="main" role="main">
-                <section class="contact-section">
-                    <h2 class="heading">联系我们</h2>
-                    <div class="body">
-                        <img src="images/contact.png" alt="联系我们">
-                        <div class="name">四川美珀门窗有限公司</div>
-                        <div class="tel">服务热线：<a href="tel:4006570567" title="给我们打电话">400-657-0567</a></div>
-                        <div class="tel">联系电话：<a href="tel:08385586655" title="给我们打电话">0838-5586655</a></div>
-                        <div class="fax">联系电话：<a href="tel:08385586655" title="给我们打电话">0838-5586655</a></div>
-                        <div class="addr">公司地址：<a href="map.html" title="查看地图">四川省广汉高新区台中路东段67号</a></div>
-                    </div>
-                    <div class="footer">扫描二维码 关注美珀门窗公众号</div>
-                </section>
+                <div id="baidumap" class="baidumap"></div>
             </main>
             <footer id="footer" class="footer" role="contentinfo">
                 <i class="iconfont icon-totop"></i>
@@ -46,6 +36,34 @@
         <script src="scripts/zepto.min.js"></script>
         <script src="scripts/fx.js"></script>
         <script src="scripts/touch.js"></script>
+        <script src="http://api.map.baidu.com/api?v=2.0&ak=0SZp25hIe6BnyizNfWGVOvVQ"></script>
         <script src="scripts/meipo-phone.js"></script>
+        <script>
+            // 设置地图尺寸
+            function setMapSize() {
+                var main = document.querySelector("#main"),
+                    baidumap = document.querySelector("#baidumap");
+                main.style.paddingTop = 0;
+                baidumap.style.height = window.getComputedStyle(main, null).getPropertyValue("height");
+            }
+            window.onresize = setMapSize;
+            window.onload = setMapSize;
+
+            // 百度地图API功能
+            var map = new BMap.Map("baidumap");
+            var point = new BMap.Point(104.271846, 30.942823);
+            var marker = new BMap.Marker(point);  // 创建标注
+            map.addOverlay(marker);              // 将标注添加到地图中
+            map.centerAndZoom(point, 15);
+            map.enableScrollWheelZoom(true);  // 允许地图缩放
+            var opts = {
+                width : 200,     // 信息窗口宽度
+                title : "美珀门窗" // 信息窗口标题
+            };
+            var infoWindow = new BMap.InfoWindow("地址：四川省广汉高新区台中路东段67号", opts);  // 创建信息窗口对象
+            marker.addEventListener("click", function(){
+                map.openInfoWindow(infoWindow, point); //开启信息窗口
+            });
+        </script>
     </body>
 </html>
