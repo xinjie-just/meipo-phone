@@ -754,12 +754,10 @@ section {
   display: block;
   padding-right: calc(50% - 92% / 2);
   padding-left: calc(50% - 92% / 2);
-  /*> div:not(:only-child):not(.body) {
-    padding-top: .3rem;
-    &:not(:first-of-type) {
-      padding-bottom: .3rem;
-    }
-  }*/
+  padding-top: .3rem;
+}
+section:not(:first-of-type) {
+  padding-bottom: .3rem;
 }
 section .heading {
   position: relative;
@@ -1032,7 +1030,7 @@ section .body img + div p {
   line-height: 1.9;
 }
 .join-market .body dl:not(:last-of-type) {
-  margin-bottom: .1rem;
+  margin-bottom: .25rem;
 }
 .join-market .body dl dt {
   position: relative;
@@ -1052,25 +1050,32 @@ section .body img + div p {
   transform: translateY(-50%);
   width: .14rem;
   height: .14rem;
-  line-height: calc(.14rem - 2px);
+  line-height: calc(.14rem - 4px);
   text-align: center;
   font-size: .08rem;
   color: #999;
   border: 1px solid currentColor;
 }
-.join-market .body dl dt.expand::before {
-  content: "-";
-  color: #7C6145;
-}
-.join-market .body dl dt.collapse::before {
-  content: "+";
-  color: #999;
-}
 .join-market .body dl dd {
+  display: none;
   margin-top: .1rem;
   color: inherit;
   font-size: .12rem;
   line-height: inherit;
+}
+.join-market .body dl.expand dt::before {
+  content: "-";
+  color: #7C6145;
+}
+.join-market .body dl.expand dd {
+  display: block;
+}
+.join-market .body dl.collapse dt::before {
+  content: "+";
+  color: #999;
+}
+.join-market .body dl.collapse dd {
+  display: none;
 }
 
 /*# sourceMappingURL=meipo-phone.css.map */

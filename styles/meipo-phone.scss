@@ -358,12 +358,10 @@ $header-height: .5rem;
 
 section {
   @include center-content(92%);
-  /*> div:not(:only-child):not(.body) {
-    padding-top: .3rem;
-    &:not(:first-of-type) {
-      padding-bottom: .3rem;
-    }
-  }*/
+  padding-top: .3rem;
+  &:not(:first-of-type) {
+    padding-bottom: .3rem;
+  }
   .heading {
     position: relative;
     width: 100%;
@@ -654,7 +652,7 @@ section {
       font-size: .12rem;
       line-height: 1.9;
       &:not(:last-of-type) {
-        margin-bottom: .1rem;
+        margin-bottom: .25rem;
       }
       dt {
         @extend %ellipsis;
@@ -674,30 +672,41 @@ section {
           transform: translateY(-50%);
           width: .14rem;
           height: .14rem;
-          line-height: calc(.14rem - 2px);
+          line-height: calc(.14rem - 4px);
           text-align: center;
           font-size: .08rem;
           color: #999;
           border: 1px solid currentColor;
         }
-        &.expand {
+      }
+      dd {
+        display: none;
+        margin-top: .1rem;
+        color: inherit;
+        font-size: .12rem;
+        line-height: inherit;
+      }
+      &.expand {
+        dt {
           &::before {
             content: "-";
             color: $main-color;
           }
         }
-        &.collapse {
+        dd {
+          display: block;
+        }
+      }
+      &.collapse {
+        dt {
           &::before {
             content: "+";
             color: #999;
           }
         }
-      }
-      dd {
-        margin-top: .1rem;
-        color: inherit;
-        font-size: .12rem;
-        line-height: inherit;
+        dd {
+          display: none;
+        }
       }
     }
   }

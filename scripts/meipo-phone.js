@@ -118,3 +118,12 @@ $("#subNav").find("li").on("tap", function () {
         dlLen = 0;
     }
 })();
+
+/*详情的展开与收起*/
+$(".join-section").find("dl").on("tap", function () {
+    if ($(this).hasClass("expand")) {
+        $(this).removeClass("expand");
+    } else {
+        $(this).addClass("expand");
+    }
+});
