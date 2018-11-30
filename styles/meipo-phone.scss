@@ -351,7 +351,7 @@ $header-height: .5rem;
     line-height: $height;
     border-bottom: 1px solid transparent;
     color: $text-color;
-    font-size: 14px;
+    font-size: .14rem;
     &.active {
       color: $main-color;
       border-bottom-color: currentColor;
@@ -397,51 +397,48 @@ $header-height: .5rem;
       right: 0;
     }
   }
-}
-/*企业简介*/
-.about-introduce {
-  img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin: .15rem auto 0;
-  }
-  .intro {
-    .body {
-      color: $text-color;
-      font-size: .12rem;
-      img + img {
-        margin-top: .08rem;
-      }
-      p,
-      div {
-        font-size: inherit;
-        line-height: 2.2em;
-        word-wrap: break-word;
+  .body {
+    color: $text-color;
+    font-size: .12rem;
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: .15rem auto 0;
+    }
+    img + img {
+      margin-top: .08rem;
+    }
+    p,
+    div {
+      line-height: .26rem;
+      word-wrap: break-word;
+      margin-top: .1rem;
+    }
+    img {
+      & + p,
+      & + div {
         margin-top: .1rem;
       }
-      img {
-        & + p,
-        & + div {
-          margin-top: .1rem;
-        }
+    }
+    div {
+      > p,
+      > div {
+        margin-top: .05rem;
       }
-      div {
-        > p,
-        > div {
+    }
+    img {
+      & + div {
+        div,
+        p {
           margin-top: .05rem;
-        }
-      }
-      img {
-        & + div {
-          div,
-          p {
-            margin-top: .05rem;
-          }
         }
       }
     }
   }
+}
+/*企业简介*/
+.about-introduce {
   .culture {
     .body {
       .text {
@@ -469,47 +466,94 @@ $header-height: .5rem;
     }
   }
 }
+/*品牌理念*/
+.about-idea {
+  .grade {
+    .picture {
+      .picture-list {
+        white-space: nowrap;
+        overflow-y: auto;
+        margin-bottom: .22rem;
+        img {
+          display: inline-block;
+          width: 2rem;
+          height: 1rem;
+          &:not(:last-of-type) {
+            margin-right: .15rem;
+          }
+        }
+      }
+      strong {
+        display: block;
+        font-size: .12rem;
+        font-weight: normal;
+        color: #666;
+        text-align: center;
+        line-height: 2;
+      }
+    }
+  }
+}
+/*美珀优势*/
+.about-advantage {
+  padding-top: .3rem;
+  padding-bottom: .3rem;
+  .body {
+    li {
+      &:not(:last-of-type) {
+        margin-bottom: .42rem;
+      }
+      width: 100%;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: left top;
+      @for $index from 1 through 4 {
+        &:nth-of-type(#{$index}) {
+          background-image: url("../images/about-advantage#{$index}.png");
+        }
+      }
+      &:nth-of-type(1) {
+        padding-top: .49rem;
+        padding-left: 1.05rem;
+      }
+      &:nth-of-type(2) {
+        padding-right: 1.05rem;
+      }
+      &:nth-of-type(3) {
+        padding-top: .22rem;
+        padding-left: 1.14rem;
+      }
+      &:nth-of-type(4) {
+        padding-right: 1.05rem;
+      }
+      dl {
+        font-size: .12rem;
+        color: $text-color;
+        &:not(:last-of-type) {
+          margin-bottom: .3rem;
+        }
+        dt {
+          font-size: .15rem;
+          font-weight: 500;
+          color: #33436a;
+          line-height: 1.6;
+          margin-bottom: .07rem;
+        }
+        dd {
+          font-size: .12rem;
+          line-height: 1.8;
+          color: inherit;
+        }
+      }
+    }
+  }
+}
 
 /*===支付,产品详情===*/
 article:not(.news-article) {
   @include center-content();
   font-size: .14rem;
   color: $text-color;
-  img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin: .15rem auto 0;
-  }
-  img + img {
-    margin-top: .08rem;
-  }
-  p,
-  div {
-    line-height: .26rem;
-    word-wrap: break-word;
-    margin-top: .1rem;
-  }
-  img {
-    & + p,
-    & + div {
-      margin-top: .1rem;
-    }
-  }
-  div {
-    > p,
-    > div {
-      margin-top: .05rem;
-    }
-  }
-  img {
-    & + div {
-      div,
-      p {
-        margin-top: .05rem;
-      }
-    }
-  }
 }
 
 /*===新闻动态===*/

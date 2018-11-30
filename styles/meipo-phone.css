@@ -753,7 +753,7 @@ label.error {
   line-height: 0.44rem;
   border-bottom: 1px solid transparent;
   color: #333;
-  font-size: 14px;
+  font-size: .14rem;
 }
 .sub-nav-item a.active {
   color: #7C6145;
@@ -801,39 +801,38 @@ label.error {
 .about-section .heading::after {
   right: 0;
 }
-
-/*企业简介*/
-.about-introduce img {
+.about-section .body {
+  color: #333;
+  font-size: .12rem;
+}
+.about-section .body img {
   display: block;
   max-width: 100%;
   height: auto;
   margin: .15rem auto 0;
 }
-.about-introduce .intro .body {
-  color: #333;
-  font-size: .12rem;
-}
-.about-introduce .intro .body img + img {
+.about-section .body img + img {
   margin-top: .08rem;
 }
-.about-introduce .intro .body p,
-.about-introduce .intro .body div {
-  font-size: inherit;
-  line-height: 2.2em;
+.about-section .body p,
+.about-section .body div {
+  line-height: .26rem;
   word-wrap: break-word;
   margin-top: .1rem;
 }
-.about-introduce .intro .body img + p, .about-introduce .intro .body img + div {
+.about-section .body img + p, .about-section .body img + div {
   margin-top: .1rem;
 }
-.about-introduce .intro .body div > p,
-.about-introduce .intro .body div > div {
+.about-section .body div > p,
+.about-section .body div > div {
   margin-top: .05rem;
 }
-.about-introduce .intro .body img + div div,
-.about-introduce .intro .body img + div p {
+.about-section .body img + div div,
+.about-section .body img + div p {
   margin-top: .05rem;
 }
+
+/*企业简介*/
 .about-introduce .culture .body .text {
   margin-top: .25rem;
 }
@@ -855,6 +854,89 @@ label.error {
   line-height: 2;
 }
 
+/*品牌理念*/
+.about-idea .grade .picture .picture-list {
+  white-space: nowrap;
+  overflow-y: auto;
+  margin-bottom: .22rem;
+}
+.about-idea .grade .picture .picture-list img {
+  display: inline-block;
+  width: 2rem;
+  height: 1rem;
+}
+.about-idea .grade .picture .picture-list img:not(:last-of-type) {
+  margin-right: .15rem;
+}
+.about-idea .grade .picture strong {
+  display: block;
+  font-size: .12rem;
+  font-weight: normal;
+  color: #666;
+  text-align: center;
+  line-height: 2;
+}
+
+/*美珀优势*/
+.about-advantage {
+  padding-top: .3rem;
+  padding-bottom: .3rem;
+}
+.about-advantage .body li {
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+.about-advantage .body li:not(:last-of-type) {
+  margin-bottom: .42rem;
+}
+.about-advantage .body li:nth-of-type(1) {
+  background-image: url("../images/about-advantage1.png");
+}
+.about-advantage .body li:nth-of-type(2) {
+  background-image: url("../images/about-advantage2.png");
+}
+.about-advantage .body li:nth-of-type(3) {
+  background-image: url("../images/about-advantage3.png");
+}
+.about-advantage .body li:nth-of-type(4) {
+  background-image: url("../images/about-advantage4.png");
+}
+.about-advantage .body li:nth-of-type(1) {
+  padding-top: .49rem;
+  padding-left: 1.05rem;
+}
+.about-advantage .body li:nth-of-type(2) {
+  padding-right: 1.05rem;
+}
+.about-advantage .body li:nth-of-type(3) {
+  padding-top: .22rem;
+  padding-left: 1.14rem;
+}
+.about-advantage .body li:nth-of-type(4) {
+  padding-right: 1.05rem;
+}
+.about-advantage .body li dl {
+  font-size: .12rem;
+  color: #333;
+}
+.about-advantage .body li dl:not(:last-of-type) {
+  margin-bottom: .3rem;
+}
+.about-advantage .body li dl dt {
+  font-size: .15rem;
+  font-weight: 500;
+  color: #33436a;
+  line-height: 1.6;
+  margin-bottom: .07rem;
+}
+.about-advantage .body li dl dd {
+  font-size: .12rem;
+  line-height: 1.8;
+  color: inherit;
+}
+
 /*===支付,产品详情===*/
 article:not(.news-article) {
   display: block;
@@ -862,32 +944,6 @@ article:not(.news-article) {
   padding-left: calc(50% - 92% / 2);
   font-size: .14rem;
   color: #333;
-}
-article:not(.news-article) img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin: .15rem auto 0;
-}
-article:not(.news-article) img + img {
-  margin-top: .08rem;
-}
-article:not(.news-article) p,
-article:not(.news-article) div {
-  line-height: .26rem;
-  word-wrap: break-word;
-  margin-top: .1rem;
-}
-article:not(.news-article) img + p, article:not(.news-article) img + div {
-  margin-top: .1rem;
-}
-article:not(.news-article) div > p,
-article:not(.news-article) div > div {
-  margin-top: .05rem;
-}
-article:not(.news-article) img + div div,
-article:not(.news-article) img + div p {
-  margin-top: .05rem;
 }
 
 /*===新闻动态===*/
