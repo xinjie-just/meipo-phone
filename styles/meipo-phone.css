@@ -305,11 +305,11 @@ ul {
 }
 
 /* ===关于浮动=== */
-.home-product .body:before {
+.home-product .body:before, .home-join .body dl:before {
   content: "";
   display: table;
 }
-.home-product .body:after {
+.home-product .body:after, .home-join .body dl:after {
   content: "";
   display: table;
   clear: both;
@@ -646,6 +646,52 @@ label.error {
 }
 
 /*招商加盟*/
+.home-join .body img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: .25rem auto 0;
+}
+.home-join .body dl {
+  margin-top: .2rem;
+}
+.home-join .body dl dt {
+  display: block;
+  font-size: .14rem;
+  line-height: 1.6;
+  font-weight: 500;
+  text-align: center;
+  color: #33436a;
+  margin-bottom: .07rem;
+}
+.home-join .body dl dd {
+  display: block;
+  color: #333;
+  font-size: .12rem;
+  line-height: 2;
+  float: left;
+  text-align: center;
+  width: 33.33333333%;
+}
+@media (max-width: 374px) {
+  .home-join .body dl dd {
+    width: 50%;
+  }
+}
+.home-join .footer {
+  display: table;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0.05rem 0.17rem 0.05rem calc(.17rem + .01rem);
+  background-color: #fff3ec;
+  box-shadow: 0 5px 0 0 #b49880;
+  font-size: .11rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .01rem;
+  color: #7C6145;
+}
+
 /*联系我们*/
 .home-contact .body {
   color: #333;
@@ -708,12 +754,12 @@ section {
   display: block;
   padding-right: calc(50% - 92% / 2);
   padding-left: calc(50% - 92% / 2);
-}
-section > div:not(:only-child) {
-  padding-top: .3rem;
-}
-section > div:not(:only-child):not(:first-of-type) {
-  padding-bottom: .3rem;
+  /*> div:not(:only-child):not(.body) {
+    padding-top: .3rem;
+    &:not(:first-of-type) {
+      padding-bottom: .3rem;
+    }
+  }*/
 }
 section .heading {
   position: relative;

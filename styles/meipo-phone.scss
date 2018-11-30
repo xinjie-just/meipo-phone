@@ -247,6 +247,54 @@ $header-height: .5rem;
 }
 
 /*招商加盟*/
+.home-join {
+  .body {
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: .25rem auto 0;
+    }
+    dl {
+      @extend %clearfix;
+      margin-top: .2rem;
+      dt  {
+        display: block;
+        font-size: .14rem;
+        line-height: 1.6;
+        font-weight: 500;
+        text-align: center;
+        color: #33436a;
+        margin-bottom: .07rem;
+      }
+      dd {
+        display: block;
+        color: $text-color;
+        font-size: .12rem;
+        line-height: 2;
+        float: left;
+        text-align: center;
+        width: 33.33333333%;
+        @media (max-width: 374px) {
+          width: 50%;
+        }
+      }
+    }
+  }
+  .footer {
+    display: table;
+    margin-right: auto;
+    margin-left: auto;
+    padding: .05rem .17rem .05rem calc(.17rem + .01rem);
+    background-color: #fff3ec;
+    box-shadow: 0 5px 0 0 #b49880;
+    font-size: .11rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .01rem;
+    color: $main-color;
+  }
+}
 
 /*联系我们*/
 .home-contact {
@@ -310,12 +358,12 @@ $header-height: .5rem;
 
 section {
   @include center-content(92%);
-  > div:not(:only-child) {
+  /*> div:not(:only-child):not(.body) {
     padding-top: .3rem;
     &:not(:first-of-type) {
       padding-bottom: .3rem;
     }
-  }
+  }*/
   .heading {
     position: relative;
     width: 100%;
