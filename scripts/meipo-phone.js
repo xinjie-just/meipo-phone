@@ -20,7 +20,6 @@
     doc.addEventListener('DOMContentLoaded', recalc, false);
 })(document, window);
 
-
 // 侧滑导航切换
 $("#menu").on("tap", function(e) {
     $("#navWrapper").toggle();
@@ -32,7 +31,6 @@ $("#menu").on("tap", function(e) {
 $("#nav").on("tap", function (e) {
     e.stopPropagation();
 });
-
 
 /*回到顶部图标的显示与影藏*/
 $(window).scroll(function() {
@@ -48,6 +46,13 @@ $(window).scroll(function() {
     $("html, body").({scrollTop: 0}, 300);
     return false;
 });*/
+
+$(window).ready(function () {
+    setStyle();
+});
+$(window).resize(function () {
+    setStyle();
+});
 
 $.fn.scrollTo =function(options){
 
@@ -101,23 +106,25 @@ $("#subNav").find("li").on("tap", function () {
    $(this).find("a").addClass("active");
    $(this).siblings("li").find("a").removeClass("active");
    $section.eq($index).addClass("active").siblings("section").removeClass("active");
+    /*if ($($section).hasClass("about-advantage")) {
+        setStyle();
+    }*/
 });
 
 /*美珀优势样式设置*/
-(function setStyle() {
+function setStyle() {
     var $body = $(".about-advantage").find(".body");
     var $li = $body.find("li");
     var dlLen = 0;
-    // console.log($li.length);
     for(var i = 0; i < $li.length; i++) {
         var $dl = $li.eq(i).find("dl");
         for (var j = 0; j < $dl.length; j++) {
-            dlLen += $dl.eq(j).height() + $dl.eq(j).css("marginTop") + $dl.eq(j).css("marginBottom");
+            dlLen += $dl.eq(j).height() + $dl.eq(j).css("margin-top") + $dl.eq(j).css("margin-bottom");
         }
         $li.eq(i).height(dlLen);
         dlLen = 0;
     }
-})();
+}
 
 /*详情的展开与收起*/
 $(".join-section").find("dl").on("tap", function () {

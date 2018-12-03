@@ -572,6 +572,7 @@ section {
         padding-right: 1.05rem;
       }
       dl {
+        display: block;
         font-size: .12rem;
         color: $text-color;
         &:not(:last-of-type) {
