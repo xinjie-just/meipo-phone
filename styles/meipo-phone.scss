@@ -851,37 +851,55 @@ section {
   }
 }
 /*体验店风采*/
-.store-image-carousel {
-  .carousel-inner {
-    width: 2.8rem;
-    height: 1.8rem;
-    left: 50%;
-    transform: translateX(-50%);
+.join-store {}
+
+/*===体验店详情===*/
+.store-details {
+  @include center-content(92%);
+  padding-top: .3rem;
+  padding-bottom: .3rem;
+  color: $text-color;
+  font-size: .12rem;
+  h2 {
+    font-size: .16rem;
+    font-weight: 500;
+    margin-bottom: .2rem;
+    line-height: 1.5;
+    color: $main-color;
   }
-  .carousel-control {
-    text-shadow: none;
-    background: none;
-    opacity: 1;
-    width: calc((100% - 2.8rem) / 2);
-    height: 1rem;
-    text-align: center;
-    line-height: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #999;
-    border-radius: 100%;
-    span {
-      color: inherit;
-      font-size: .16rem;
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: .15rem auto 0;
+  }
+  img + img {
+    margin-top: .2rem;
+  }
+  p,
+  div {
+    line-height: .26rem;
+    word-wrap: break-word;
+    margin-top: .1rem;
+  }
+  img {
+    & + p,
+    & + div {
+      margin-top: .1rem;
     }
-    &:hover {
-      color: $main-color;
+  }
+  div {
+    > p,
+    > div {
+      margin-top: .1rem;
     }
-    &.left {
-      background-image: none;
-    }
-    &.right {
-      background-image: none;
+  }
+  img {
+    & + div {
+      div,
+      p {
+        margin-top: .1rem;
+      }
     }
   }
 }

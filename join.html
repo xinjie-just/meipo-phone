@@ -252,14 +252,12 @@
                     <h2 class="heading">体验店风采</h2>
                     <div class="body swiper-container">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide">Slide 1</div>
-                            <div class="swiper-slide">Slide 2</div>
-                            <div class="swiper-slide">Slide 3</div>
+                            <a href="#" title="体验店" class="swiper-slide"><img src="images/join-store1.png" alt="体验店"></a>
+                            <a href="#" title="体验店"  class="swiper-slide"><img src="images/join-store2.png" alt="体验店"></a>
+                            <a href="#" title="体验店"  class="swiper-slide"><img src="images/join-store3.png" alt="体验店"></a>
                         </div>
-
-                        <!-- 如果需要导航按钮 -->
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev swiper-button-black"></div>
+                        <div class="swiper-button-next swiper-button-black"></div>
                     </div>
                 </section>
             </main>
@@ -274,25 +272,13 @@
         <script src="scripts/meipo-phone.js"></script>
         <script>
             var mySwiper = new Swiper ('.swiper-container', {
-                direction: 'horizontal', // 垂直切换选项
                 loop: true, // 循环模式选项
-
-                // 如果需要分页器
-                pagination: {
-                    el: '.swiper-pagination'
-                },
-
                 // 如果需要前进后退按钮
                 navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev'
-                },
-
-                // 如果需要滚动条
-                scrollbar: {
-                    el: '.swiper-scrollbar'
+                    nextEl: '.swiper-button-prev',
+                    prevEl: '.swiper-button-next'
                 }
-            })
+            });
         </script>
     </body>
 </html>
