@@ -537,6 +537,15 @@ section {
 }
 /*品牌理念*/
 .about-idea {
+  .idea {
+    .about-idea2 {
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+      width: 2.5rem;
+      height: 1.8rem;
+    }
+  }
   .grade {
     margin-top: .3rem;
     margin-bottom: .3rem;
@@ -575,7 +584,7 @@ section {
         margin-bottom: .42rem;
       }
       width: 100%;
-      background-size: contain;
+      background-size: 100%;
       background-repeat: no-repeat;
       background-position: left top;
       @for $index from 1 through 4 {
@@ -586,16 +595,30 @@ section {
       &:nth-of-type(1) {
         padding-top: .49rem;
         padding-left: 1.05rem;
+        padding-right: 1em;
       }
       &:nth-of-type(2) {
         padding-right: 1.05rem;
+        padding-left: 1em;
       }
       &:nth-of-type(3) {
         padding-top: .22rem;
-        padding-left: 1.14rem;
+        padding-left: 1.28rem;
+        padding-right: 1em;
       }
       &:nth-of-type(4) {
         padding-right: 1.05rem;
+        padding-left: 1em;
+      }
+      &.marketing-management {
+        .policy {
+          @extend %clearfix;
+          dd {
+            width: 50%;
+            padding-right: 1em;
+            float: left;
+          }
+        }
       }
       dl {
         display: block;
@@ -606,7 +629,7 @@ section {
         }
         dt {
           font-size: .15rem;
-          font-weight: 500;
+          font-weight: 600;
           color: #33436a;
           line-height: 1.6;
           margin-bottom: .07rem;
@@ -881,6 +904,45 @@ section {
 .join-store {
   .swiper-wrapper {
     margin-top: 0;
+    img {
+      display: block;
+      width: 2.8rem;
+      height: 1.8rem;
+    }
+  }
+  .swiper-button-black {
+    margin-top: 0;
+  }
+  .next-btn,
+  .prev-btn {
+    position: absolute;
+    top: 50%;
+    width: .16rem;
+    height: .4rem;
+    margin-top: 0;
+    z-index: 10;
+    cursor: pointer;
+    background-size: .34rem .4rem;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .prev-btn {
+    left: 0;
+    background-image: url("../images/left.png");
+  }
+  .next-btn {
+    right: 0;
+    background-image: url("../images/right.png");
+  }
+  .footer {
+    margin-top: .22rem;
+    font-size: .14rem;
+    font-weight: 500;
+    color: $text-color;
+    text-align: center;
+    line-height: 1.6;
+    padding-right: .32rem;
+    padding-left: .32rem;
   }
 }
 

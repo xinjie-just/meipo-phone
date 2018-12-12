@@ -52,7 +52,7 @@
                 <section class="join-section join-market">
                     <h2 class="heading">市场前景</h2>
                     <div class="body">
-                        <img src="images/enterprise-culture.png" alt="市场前景">
+                        <img src="images/join-market.png" alt="市场前景">
                         <dl class="expand">
                             <dt>广阔前景，干亿市场</dt>
                             <dd>随着房地产行业以及城镇化进程的推进，门窗行业迎来了突飞猛 进的发展。据国家统计数据显示，2017年我国门窗行业市场规模 已经突破6600亿元，未来随着我国门窗行业的不断创新与变革， 行业市场仍将维持增长态势。</dd>
@@ -238,9 +238,11 @@
                             <a href="#" title="体验店"  class="swiper-slide"><img src="images/join-store2.png" alt="体验店"></a>
                             <a href="#" title="体验店"  class="swiper-slide"><img src="images/join-store3.png" alt="体验店"></a>
                         </div>
-                        <div class="swiper-button-prev swiper-button-black"></div>
-                        <div class="swiper-button-next swiper-button-black"></div>
+                        <div class="prev-btn"></div>
+                        <div class="next-btn"></div>
                     </div>
+                    <!--下面的标题跟随分店名字-->
+                    <h4 class="footer">成都加盟一分店</h4>
                 </section>
             </main>
             <footer id="footer" class="footer" role="contentinfo">
@@ -257,8 +259,8 @@
                 loop: true, // 循环模式选项
                 // 如果需要前进后退按钮
                 navigation: {
-                    nextEl: '.swiper-button-prev',
-                    prevEl: '.swiper-button-next'
+                    nextEl: '.next-btn',
+                    prevEl: '.prev-btn'
                 }
             });
         </script>

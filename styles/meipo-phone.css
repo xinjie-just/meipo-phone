@@ -305,11 +305,11 @@ ul {
 }
 
 /* ===关于浮动=== */
-.home-product .body:before, .home-join .body dl:before, .product-section:not(.product-quality) .body:before {
+.home-product .body:before, .home-join .body dl:before, .about-advantage .body li.marketing-management .policy:before, .product-section:not(.product-quality) .body:before {
   content: "";
   display: table;
 }
-.home-product .body:after, .home-join .body dl:after, .product-section:not(.product-quality) .body:after {
+.home-product .body:after, .home-join .body dl:after, .about-advantage .body li.marketing-management .policy:after, .product-section:not(.product-quality) .body:after {
   content: "";
   display: table;
   clear: both;
@@ -991,6 +991,13 @@ section .body img + div p {
 }
 
 /*品牌理念*/
+.about-idea .idea .about-idea2 {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 2.5rem;
+  height: 1.8rem;
+}
 .about-idea .grade {
   margin-top: .3rem;
   margin-bottom: .3rem;
@@ -1024,7 +1031,7 @@ section .body img + div p {
 }
 .about-advantage .body li {
   width: 100%;
-  background-size: contain;
+  background-size: 100%;
   background-repeat: no-repeat;
   background-position: left top;
 }
@@ -1046,16 +1053,25 @@ section .body img + div p {
 .about-advantage .body li:nth-of-type(1) {
   padding-top: .49rem;
   padding-left: 1.05rem;
+  padding-right: 1em;
 }
 .about-advantage .body li:nth-of-type(2) {
   padding-right: 1.05rem;
+  padding-left: 1em;
 }
 .about-advantage .body li:nth-of-type(3) {
   padding-top: .22rem;
-  padding-left: 1.14rem;
+  padding-left: 1.28rem;
+  padding-right: 1em;
 }
 .about-advantage .body li:nth-of-type(4) {
   padding-right: 1.05rem;
+  padding-left: 1em;
+}
+.about-advantage .body li.marketing-management .policy dd {
+  width: 50%;
+  padding-right: 1em;
+  float: left;
 }
 .about-advantage .body li dl {
   display: block;
@@ -1067,7 +1083,7 @@ section .body img + div p {
 }
 .about-advantage .body li dl dt {
   font-size: .15rem;
-  font-weight: 500;
+  font-weight: 600;
   color: #33436a;
   line-height: 1.6;
   margin-bottom: .07rem;
@@ -1329,6 +1345,45 @@ section .body img + div p {
 /*体验店风采*/
 .join-store .swiper-wrapper {
   margin-top: 0;
+}
+.join-store .swiper-wrapper img {
+  display: block;
+  width: 2.8rem;
+  height: 1.8rem;
+}
+.join-store .swiper-button-black {
+  margin-top: 0;
+}
+.join-store .next-btn,
+.join-store .prev-btn {
+  position: absolute;
+  top: 50%;
+  width: .16rem;
+  height: .4rem;
+  margin-top: 0;
+  z-index: 10;
+  cursor: pointer;
+  background-size: .34rem .4rem;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.join-store .prev-btn {
+  left: 0;
+  background-image: url("../images/left.png");
+}
+.join-store .next-btn {
+  right: 0;
+  background-image: url("../images/right.png");
+}
+.join-store .footer {
+  margin-top: .22rem;
+  font-size: .14rem;
+  font-weight: 500;
+  color: #333;
+  text-align: center;
+  line-height: 1.6;
+  padding-right: .32rem;
+  padding-left: .32rem;
 }
 
 /*===体验店详情===*/
