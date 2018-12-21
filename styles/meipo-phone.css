@@ -1565,6 +1565,9 @@ section .body img + div p {
 }
 
 /*品质美珀*/
+.product-quality {
+  padding-bottom: .3rem;
+}
 .product-quality .swiper-slide img {
   display: block;
   max-width: 100%;
@@ -1579,6 +1582,7 @@ section .body img + div p {
   background-color: #ccc;
   width: .05rem;
   height: .05rem;
+  border-radius: 50%;
   opacity: 1;
 }
 .product-quality .product-quality-pagination li.active {
