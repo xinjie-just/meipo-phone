@@ -843,7 +843,7 @@ section:not(:first-of-type) {
 section .heading {
   position: relative;
   width: 100%;
-  height: .4rem;
+  height: .45rem;
   margin-bottom: .25rem;
   background: url("../images/heading-bg-icon.png") no-repeat center bottom/0.1rem;
   font-size: .18rem;
@@ -1561,6 +1561,43 @@ section .body img + div p {
 }
 .product-details img + div div,
 .product-details img + div p {
+  margin-top: .1rem;
+}
+
+/*品质美珀*/
+.product-quality .swiper-slide img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-right: auto;
+  margin-left: auto;
+}
+.product-quality .product-quality-pagination {
+  text-align: center;
+}
+.product-quality .product-quality-pagination li {
+  background-color: #ccc;
+  width: .05rem;
+  height: .05rem;
+  opacity: 1;
+}
+.product-quality .product-quality-pagination li.active {
+  background-color: #7C6145;
+}
+.product-quality .footer {
+  margin-top: .23rem;
+}
+.product-quality .footer h4 {
+  font-size: .15rem;
+  font-weight: 500;
+  color: #33436a;
+  line-height: 1.6em;
+  text-align: center;
+}
+.product-quality .footer p {
+  font-size: .12rem;
+  color: #333;
+  line-height: 1.8em;
   margin-top: .1rem;
 }
 
