@@ -1348,8 +1348,10 @@ section .body img + div p {
 }
 .join-store .swiper-wrapper img {
   display: block;
-  width: 2.8rem;
+  max-width: 2.8rem;
+  width: auto;
   height: 1.8rem;
+  margin: 0 auto;
 }
 .join-store .swiper-button-black {
   margin-top: 0;
@@ -1360,7 +1362,7 @@ section .body img + div p {
   top: 50%;
   width: .16rem;
   height: .4rem;
-  margin-top: 0;
+  margin-top: -.444rem;
   z-index: 10;
   cursor: pointer;
   background-size: .34rem .4rem;
@@ -1375,7 +1377,7 @@ section .body img + div p {
   right: 0;
   background-image: url("../images/right.png");
 }
-.join-store .footer {
+.join-store .join-store-heading {
   margin-top: .22rem;
   font-size: .14rem;
   font-weight: 500;
@@ -1571,11 +1573,15 @@ section .body img + div p {
 .product-quality .swiper-slide img {
   display: block;
   max-width: 100%;
-  height: auto;
+  height: 2.24rem;
+  width: auto;
   margin-right: auto;
   margin-left: auto;
 }
 .product-quality .product-quality-pagination {
+  position: absolute;
+  top: 2.24rem;
+  bottom: auto;
   text-align: center;
 }
 .product-quality .product-quality-pagination li {
@@ -1588,17 +1594,17 @@ section .body img + div p {
 .product-quality .product-quality-pagination li.active {
   background-color: #7C6145;
 }
-.product-quality .footer {
-  margin-top: .23rem;
+.product-quality .product-quality-info {
+  margin-top: .4rem;
 }
-.product-quality .footer h4 {
+.product-quality .product-quality-info h4 {
   font-size: .15rem;
   font-weight: 500;
   color: #33436a;
   line-height: 1.6em;
   text-align: center;
 }
-.product-quality .footer p {
+.product-quality .product-quality-info p {
   font-size: .12rem;
   color: #333;
   line-height: 1.8em;
