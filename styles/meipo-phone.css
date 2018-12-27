@@ -629,7 +629,7 @@ label.error {
 
 /*关于美珀*/
 .home-about .heading {
-  background: url("../images/home-about-title.png") no-repeat center top/0.75rem 0.193rem, url("../images/heading-bg-icon.png") no-repeat center bottom/0.1rem;
+  background: url("../images/home-about-title.png") no-repeat center top/auto 0.193rem, url("../images/heading-bg-icon.png") no-repeat center bottom/0.1rem;
 }
 .home-about .body {
   /*多行文本省略*/
@@ -660,7 +660,7 @@ label.error {
 
 /*产品中心*/
 .home-product .heading {
-  background: url("../images/home-product-title.png") no-repeat center top/0.75rem 0.193rem, url("../images/heading-bg-icon.png") no-repeat center bottom/0.1rem;
+  background: url("../images/home-product-title.png") no-repeat center top/auto 0.193rem, url("../images/heading-bg-icon.png") no-repeat center bottom/0.1rem;
 }
 .home-product .body {
   margin-bottom: .25rem;
@@ -734,7 +734,7 @@ label.error {
 
 /*招商加盟*/
 .home-join .heading {
-  background: url("../images/home-join-title.png") no-repeat center top/0.75rem 0.193rem, url("../images/heading-bg-icon.png") no-repeat center bottom/0.1rem;
+  background: url("../images/home-join-title.png") no-repeat center top/auto 0.193rem, url("../images/heading-bg-icon.png") no-repeat center bottom/0.1rem;
 }
 .home-join .body img {
   display: block;
@@ -784,7 +784,7 @@ label.error {
 
 /*联系我们*/
 .home-contact .heading {
-  background: url("../images/home-contact-title.png") no-repeat center top/0.75rem 0.193rem, url("../images/heading-bg-icon.png") no-repeat center bottom/0.1rem;
+  background: url("../images/home-contact-title.png") no-repeat center top/auto 0.193rem, url("../images/heading-bg-icon.png") no-repeat center bottom/0.1rem;
 }
 .home-contact .body {
   color: #333;
@@ -978,14 +978,14 @@ section .body img + div p {
 
 /*企业简介*/
 .about-introduce .intro .heading {
-  background: url("../images/about-introduce-intro-title.png") no-repeat center top/0.75rem 0.193rem, url("../images/heading-bg-icon.png") no-repeat center bottom/0.1rem;
+  background: url("../images/about-introduce-intro-title.png") no-repeat center top/auto 0.193rem, url("../images/heading-bg-icon.png") no-repeat center bottom/0.1rem;
 }
 .about-introduce .culture {
   margin-top: .3rem;
   margin-bottom: .3rem;
 }
 .about-introduce .culture .heading {
-  background: url("../images/about-introduce-culture-title.png") no-repeat center top/0.75rem 0.193rem, url("../images/heading-bg-icon.png") no-repeat center bottom/0.1rem;
+  background: url("../images/about-introduce-culture-title.png") no-repeat center top/auto 0.193rem, url("../images/heading-bg-icon.png") no-repeat center bottom/0.1rem;
 }
 .about-introduce .culture .body .text {
   margin-top: .25rem;
@@ -1010,7 +1010,7 @@ section .body img + div p {
 
 /*品牌理念*/
 .about-idea .idea .heading {
-  background: url("../images/about-idea-idea-title.png") no-repeat center top/0.75rem 0.193rem, url("../images/heading-bg-icon.png") no-repeat center bottom/0.1rem;
+  background: url("../images/about-idea-idea-title.png") no-repeat center top/auto 0.193rem, url("../images/heading-bg-icon.png") no-repeat center bottom/0.1rem;
 }
 .about-idea .idea .about-idea2 {
   display: block;
@@ -1054,7 +1054,7 @@ section .body img + div p {
   padding-bottom: .3rem;
 }
 .about-advantage .heading {
-  background: url("../images/about-advantage-title.png") no-repeat center top/0.75rem 0.193rem, url("../images/heading-bg-icon.png") no-repeat center bottom/0.1rem;
+  background: url("../images/about-advantage-title.png") no-repeat center top/auto 0.193rem, url("../images/heading-bg-icon.png") no-repeat center bottom/0.1rem;
 }
 .about-advantage .body li {
   width: 100%;
@@ -1127,7 +1127,7 @@ section .body img + div p {
   padding-bottom: .3rem;
 }
 .contact-section .heading {
-  background: url("../images/contact-section-title.png") no-repeat center top/0.75rem 0.193rem, url("../images/heading-bg-icon.png") no-repeat center bottom/0.1rem;
+  background: url("../images/contact-section-title.png") no-repeat center top/auto 0.193rem, url("../images/heading-bg-icon.png") no-repeat center bottom/0.1rem;
 }
 .contact-section .body {
   color: #333;
@@ -1179,11 +1179,11 @@ section .body img + div p {
 
 /*市场前景,加盟条件*/
 .join-market .heading {
-  background: url("../images/join-market-title.png") no-repeat center top/0.75rem 0.193rem, url("../images/heading-bg-icon.png") no-repeat center bottom/0.1rem;
+  background: url("../images/join-market-title.png") no-repeat center top/auto 0.193rem, url("../images/heading-bg-icon.png") no-repeat center bottom/0.1rem;
 }
 
 .join-condition .heading {
-  background: url("../images/join-condition-title.png") no-repeat center top/0.75rem 0.193rem, url("../images/heading-bg-icon.png") no-repeat center bottom/0.1rem;
+  background: url("../images/join-condition-title.png") no-repeat center top/auto 0.193rem, url("../images/heading-bg-icon.png") no-repeat center bottom/0.1rem;
 }
 
 .join-market .body img,
@@ -1256,7 +1256,7 @@ section .body img + div p {
 
 /*加盟优势*/
 .join-advantage .heading {
-  background: url("../images/join-advantage-title.png") no-repeat center top/0.75rem 0.193rem, url("../images/heading-bg-icon.png") no-repeat center bottom/0.1rem;
+  background: url("../images/join-advantage-title.png") no-repeat center top/auto 0.193rem, url("../images/heading-bg-icon.png") no-repeat center bottom/0.1rem;
 }
 .join-advantage .text {
   margin-top: .22rem;
@@ -1288,7 +1288,7 @@ section .body img + div p {
 
 /*加盟支持*/
 .join-support .heading {
-  background: url("../images/join-support-title.png") no-repeat center top/0.75rem 0.193rem, url("../images/heading-bg-icon.png") no-repeat center bottom/0.1rem;
+  background: url("../images/join-support-title.png") no-repeat center top/auto 0.193rem, url("../images/heading-bg-icon.png") no-repeat center bottom/0.1rem;
 }
 .join-support .body .support-list {
   margin-top: .25rem;
@@ -1337,7 +1337,7 @@ section .body img + div p {
 
 /*加盟流程*/
 .join-process .heading {
-  background: url("../images/join-process-title.png") no-repeat center top/0.75rem 0.193rem, url("../images/heading-bg-icon.png") no-repeat center bottom/0.1rem;
+  background: url("../images/join-process-title.png") no-repeat center top/auto 0.193rem, url("../images/heading-bg-icon.png") no-repeat center bottom/0.1rem;
 }
 .join-process .body {
   margin-top: .3rem;
@@ -1391,7 +1391,7 @@ section .body img + div p {
 
 /*体验店风采*/
 .join-store .heading {
-  background: url("../images/join-support-title.png") no-repeat center top/0.75rem 0.193rem, url("../images/heading-bg-icon.png") no-repeat center bottom/0.1rem;
+  background: url("../images/join-store-title.png") no-repeat center top/auto 0.193rem, url("../images/heading-bg-icon.png") no-repeat center bottom/0.1rem;
 }
 .join-store .swiper-wrapper {
   margin-top: 0;
@@ -1621,7 +1621,7 @@ section .body img + div p {
   padding-bottom: .3rem;
 }
 .product-quality .heading {
-  background: url("../images/product-quality-title.png") no-repeat center top/0.75rem 0.193rem, url("../images/heading-bg-icon.png") no-repeat center bottom/0.1rem;
+  background: url("../images/product-quality-title.png") no-repeat center top/auto 0.193rem, url("../images/heading-bg-icon.png") no-repeat center bottom/0.1rem;
 }
 .product-quality .swiper-slide img {
   display: block;
@@ -1665,27 +1665,27 @@ section .body img + div p {
 }
 
 .product-open-window .heading {
-  background: url("../images/product-open-window-title.png") no-repeat center top/0.75rem 0.193rem, url("../images/heading-bg-icon.png") no-repeat center bottom/0.1rem;
+  background: url("../images/product-open-window-title.png") no-repeat center top/auto 0.193rem, url("../images/heading-bg-icon.png") no-repeat center bottom/0.1rem;
 }
 
 .product-push-pull-window .heading {
-  background: url("../images/product-push-pull-window-title.png") no-repeat center top/0.75rem 0.193rem, url("../images/heading-bg-icon.png") no-repeat center bottom/0.1rem;
+  background: url("../images/product-push-pull-window-title.png") no-repeat center top/auto 0.193rem, url("../images/heading-bg-icon.png") no-repeat center bottom/0.1rem;
 }
 
 .product-sliding-door .heading {
-  background: url("../images/product-sliding-door-title.png") no-repeat center top/0.75rem 0.193rem, url("../images/heading-bg-icon.png") no-repeat center bottom/0.1rem;
+  background: url("../images/product-sliding-door-title.png") no-repeat center top/auto 0.193rem, url("../images/heading-bg-icon.png") no-repeat center bottom/0.1rem;
 }
 
 .product-folding-door .heading {
-  background: url("../images/product-folding-door-title.png") no-repeat center top/0.75rem 0.193rem, url("../images/heading-bg-icon.png") no-repeat center bottom/0.1rem;
+  background: url("../images/product-folding-door-title.png") no-repeat center top/auto 0.193rem, url("../images/heading-bg-icon.png") no-repeat center bottom/0.1rem;
 }
 
 .product-flat-open-door .heading {
-  background: url("../images/product-flat-open-door-title.png") no-repeat center top/0.75rem 0.193rem, url("../images/heading-bg-icon.png") no-repeat center bottom/0.1rem;
+  background: url("../images/product-flat-open-door-title.png") no-repeat center top/auto 0.193rem, url("../images/heading-bg-icon.png") no-repeat center bottom/0.1rem;
 }
 
 .product-sunshine-room .heading {
-  background: url("../images/product-sunshine-room-title.png") no-repeat center top/0.75rem 0.193rem, url("../images/heading-bg-icon.png") no-repeat center bottom/0.1rem;
+  background: url("../images/product-sunshine-room-title.png") no-repeat center top/auto 0.193rem, url("../images/heading-bg-icon.png") no-repeat center bottom/0.1rem;
 }
 
 /*# sourceMappingURL=meipo-phone.css.map */
